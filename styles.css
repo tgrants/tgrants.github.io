@@ -1,0 +1,27 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial;
+}
+header, footer {
+	padding-left: 3vh;
+	height: 14vh;
+	background-color: Black;
+	color: white;
+}
+footer center {
+	padding-top: 6vh;
+}
+header h1 {
+	font-size: 8vh;
+	padding-top: 2vh;
+}
+.content {
+	background-color: White;
+	height: 72vh;
+}
+.center p {
+	font-size: 4vh;
+	text-align: center;
+	padding-top: 30vh;
+}
