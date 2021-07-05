@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TEMPLATE
+<project>
+	<title></title>
+	<fulltitle lang="en"></fulltitle>
+	<fulltitle lang="lv"></fulltitle>
+	<pubdate></pubdate>
+	<score></score>
+	<tags></tags>
+	<thumbnail></thumbnail>
+	<description lang="en"></description>
+	<description lang="lv"></description>
+	<content lang="en"></content>
+	<content lang="lv"></content>
+<project>
+-->
+<!-- ELEMENTS
+	<title>			Title of the project
+	<fulltitle>		The full title
+						- Optional
+						- Longer version of title <title>
+	<pubdate>		Date of adding project to the site
+						- Projects will be sorted by this on the main page
+						- Formated as DD.MM.YYYY
+	<score>			Complexity of the project
+						- Positive integer
+						- Can be sorted by this
+	<tags>			Tags
+	<thumbnail>		Link to thumbnail image
+						- Optional
+	<description>	A brief description of the project
+	<content> 		Contains more information about the project
+						- Optional
+-->
