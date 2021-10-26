@@ -11,3 +11,6 @@ function loadXMLDoc(url) {
 	xmlhttp.send(null);
 	document.getElementById('main').innerHTML=xmlhttp.responseText;
 }
+document.addEventListener("DOMContentLoaded", loadXMLDoc('projects.xml'){
+    console.log('DOM content loaded');
+})
