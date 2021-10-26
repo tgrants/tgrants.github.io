@@ -1,34 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TEMPLATE
-<project>
-	<title></title>
-	<fulltitle lang="en"></fulltitle>
-	<fulltitle lang="lv"></fulltitle>
-	<pubdate></pubdate>
-	<score></score>
-	<tags></tags>
-	<thumbnail></thumbnail>
-	<description lang="en"></description>
-	<description lang="lv"></description>
-	<content lang="en"></content>
-	<content lang="lv"></content>
-<project>
--->
-<!-- ELEMENTS
-	<title>			Title of the project
-	<fulltitle>		The full title
-						- Optional
-						- Longer version of title <title>
-	<pubdate>		Date of adding project to the site
-						- Projects will be sorted by this on the main page
-						- Formated as DD.MM.YYYY
-	<score>			Complexity of the project
-						- Positive integer
-						- Can be sorted by this
-	<tags>			Tags
-	<thumbnail>		Link to thumbnail image
-						- Optional
-	<description>	A brief description of the project
-	<content> 		Contains more information about the project
-						- Optional
--->
+<article>
+	<h1>Driving simulator 2021</h1>
+	<p class="date">17.10.2021</p>
+	<p class="content">A 2D endless runner Made for the OCFF game-jam. The game can be downloaded <a href="here">https://scheibenwischer.itch.io/driving-simulator-2021</a>.</p>
+</article>
+<article>
+	<h1>Gaussian elimination calculator</h1>
+	<p class="date">2021</p>
+	<p class="content">Written in C++ as a school assignment, this program can solve linear equations by performing Gaussian elimination on its coefficient matrix.</p>
+	<img src="https://i.ibb.co/3yPWk2C/gaussian-elimination-calculator.png" alt="gaussian-elimination-calculator" border="0" style="width: 800px">
+</article>
+<article>
+	<h1>Portfolio website</h1>
+	<p class="date">ONGOING</p>
+	<p class="content">My portfolio website is this site you're on right now - its purpose is to showcase my personal projects.
+	It's hosted on GitHub pages - this means I can't use a database to store information. To circumvent this, I'm currently working on a script, that would load articles from an xml file.</p>
+</article>
+<article>
+	<h1>IMGCRY</h1>
+	<p class="date">2020</p>
+	<p class="content">After reading about <a href="https://en.wikipedia.org/wiki/Steganography">steganography</a> - the practice of concealing a message within another message - I knew I had to try it myself. This program can hide a text by splitting and storing it as the least significant bit of an images' pixel colour value.
+	The chages are very miniscule and usually it's impossible to tell the old and new picture apart.</p>
+</article>
+<article>
+	<h1>3D Ortographic projection</h1>
+	<p class="date">2019</p>
+	<p class="content">This program can draw and rotate any convex shape that consists of triangles. Written in pascal using graph library.</p>
+	<img src="https://i.ibb.co/j4LksjH/simplex-spin.gif" alt="simplex-spin" border="0">
+</article>
