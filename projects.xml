@@ -2,19 +2,19 @@
 <article>
 	<h1>Driving simulator 2021</h1>
 	<p class="date">17.10.2021</p>
-	<p class="content">A 2D endless runner Made for the OCFF game-jam. The game can be downloaded <a href="https://scheibenwischer.itch.io/driving-simulator-2021">here</a>.</p>
+	<p class="content">This 2D endless runner is my fist game. The first version was made in about 6 hours using Unity game engine and it features randomly generated surroundings and obstacles. Currently I'm working on the second version that'd include new features, such as sound. The game can be downloaded <a href="https://scheibenwischer.itch.io/driving-simulator-2021">here</a>.</p>
+	<img src="https://i.ibb.co/j8mKLgn/driving-simulator-2021-screenshot.png" alt="driving-simulator-2021-screenshot" border="0" style="width: 800px">
 </article>
 <article>
 	<h1>Gaussian elimination calculator</h1>
-	<p class="date">2021</p>
+	<p class="date">01.10.2021</p>
 	<p class="content">Written in C++ as a school assignment, this program can solve linear equations by performing Gaussian elimination on its coefficient matrix.</p>
 	<img src="https://i.ibb.co/3yPWk2C/gaussian-elimination-calculator.png" alt="gaussian-elimination-calculator" border="0" style="width: 800px">
 </article>
 <article>
 	<h1>Portfolio website</h1>
 	<p class="date">ONGOING</p>
-	<p class="content">My portfolio website is this site you're on right now - its purpose is to showcase my personal projects.
-	It's hosted on GitHub pages - this means I can't use a database to store information. To circumvent this, I'm currently working on a script, that would load articles from an xml file.</p>
+	<p class="content">My portfolio website is this site you're on right now - its purpose is to showcase my personal projects. It's hosted on GitHub pages - this means I can't use a database to store information. In order to make editing this site easier, I'm loading the project list from an .xml file. This project never really stops as I constantly find new ideas for improvement - right now I'm working on a better design using flexbox.</p>
 </article>
 <article>
 	<h1>IMGCRY</h1>
