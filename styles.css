@@ -3,51 +3,94 @@
 	padding: 0px;
 	font-family: Arial;
 }
-header, footer {
-	padding-left: 3vw;
+.header {
 	background-color: #040926;
+	padding: 10px 0px 10px 20px;
+	border-bottom: 4px solid #ff0e8b;
+}
+.header__wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
+	flex: 1 0 70%;
+	padding: 0 2rem;
+}
+.nav {
+	flex: 0 1 30%;
 	color: white;
 }
-header {
-	border-bottom: 0.7vh solid #ff0e8b;
-	height: 12vw;
+.nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
-footer {
-	border-top: 0.7vh solid #ff0e8b;
-	height: 16vh;
+.nav a:link,
+.nav a:visited {
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	padding: 10px;
 }
-footer center {
-	padding-top: 8vh;
+.title {
+	font-size: 3rem;
+	text-decoration: none;
+	color: white;
 }
-header h1 {
-	font-size: 5vw;
-	padding-top: 4vw;
-}
-hr {
+.footer {
+	width: 100%;
+	border-top: 4px solid #ff0e8b;
 	background-color: #040926;
-	height: 4vw;
-	border-top: 0.7vh solid #ff0e8b;
-	border-bottom: 0.7vh solid #ff0e8b;
 }
-main {
-	padding: 2vh 8vw 2vh 8vw;
+.footer__wrapper {
+	padding: 30px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
-article {
-	padding-bottom: 1vh;
+.footer__wrapper nav {
+	padding: 0 0 10px;
 }
-article .date {
+.icons ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.icons li {
+	padding: 0 10px;
+}
+.copyright-notice {
+	color: white;
+}
+#introduction {
+	height: 91vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#introduction h1{
+	font-size: 5rem;
+}
+#introduction p {
+	font-size: 2rem;
+}
+#main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#main article {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 0 10px;
+	max-width: 800px;
+}
+#main article .date {
 	color: green;
 	font-weight: bold;
 }
-#intro {
-	text-align: center;
-	background: white;
-}
-#intro h1 {
-	font-size: 9vw;
-	padding-top: 3vw;
-}
-#intro p {
-	font-size: 3vw;
-	padding-bottom: 4vh;
+#main article img {
+	width: 100%;
 }

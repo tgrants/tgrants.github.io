@@ -3,13 +3,13 @@
 	<h1>Driving simulator 2021</h1>
 	<p class="date">17.10.2021</p>
 	<p class="content">This 2D endless runner is my first game. The current version was made in about 6 hours using Unity game engine and it features randomly generated surroundings and obstacles. Right now I'm working on the second version that'd include new features, such as sound. The game can be downloaded <a href="https://scheibenwischer.itch.io/driving-simulator-2021">here</a>.</p>
-	<img src="https://i.ibb.co/j8mKLgn/driving-simulator-2021-screenshot.png" alt="driving-simulator-2021-screenshot" border="0" style="width: 800px">
+	<img src="https://i.ibb.co/j8mKLgn/driving-simulator-2021-screenshot.png" alt="driving-simulator-2021-screenshot" border="0">
 </article>
 <article>
 	<h1>Gaussian elimination calculator</h1>
 	<p class="date">01.10.2021</p>
 	<p class="content">Written in C++ as a school assignment, this program can solve linear equations by performing Gaussian elimination on its coefficient matrix.</p>
-	<img src="https://i.ibb.co/3yPWk2C/gaussian-elimination-calculator.png" alt="gaussian-elimination-calculator" border="0" style="width: 800px">
+	<img src="https://i.ibb.co/3yPWk2C/gaussian-elimination-calculator.png" alt="gaussian-elimination-calculator" border="0">
 </article>
 <article>
 	<h1>Portfolio website</h1>
@@ -28,3 +28,4 @@
 	<p class="content">This program can draw and rotate any convex shape that consists of triangles. Written in pascal using graph library.</p>
 	<img src="https://i.ibb.co/j4LksjH/simplex-spin.gif" alt="simplex-spin" border="0">
 </article>
+	
