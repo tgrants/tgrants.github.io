@@ -72,9 +72,11 @@
 }
 #introduction h1{
 	font-size: 5rem;
+	text-align: center;
 }
 #introduction p {
 	font-size: 2rem;
+	text-align: center;
 }
 #main {
 	display: flex;
