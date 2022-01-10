@@ -11,11 +11,29 @@ body {
 	flex-direction: column;
 	background: #1a1b27;
 }
+/* Scrollbar */
+body::-webkit-scrollbar {
+	width: 10px;
+}
+body::-webkit-scrollbar-track {
+	background: #11121a;
+}
+body::-webkit-scrollbar-thumb {
+	background: #888;
+}
+body::-webkit-scrollbar-thumb:hover {
+	background: #aaa;
+}
 
 /* Headings and parahrapghs */
 h1 {
 	font-family: 'Roboto';
 	font-size: 32px;
+	color: #f5f5f5;
+}
+h2 {
+	font-family: 'Roboto';
+	font-size: 28px;
 	color: #f5f5f5;
 }
 p {
@@ -121,6 +139,26 @@ a:active {
 	padding-top: 10px;
 }
 
+/* Tooltip */
+.tooltip {
+position: relative;
+display: inline-block;
+}
+.tooltip .tooltiptext {
+visibility: hidden;
+width: 120px;
+background-color: black;
+color: #fff;
+text-align: center;
+padding: 5px 0;
+border-radius: 6px;
+position: absolute;
+z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+visibility: visible;
+}
+
 /* Main */
 .main {
 	flex: 1 0 auto;
@@ -160,4 +198,18 @@ a:active {
 .hits {
 	color: #ffb555 !important;
 	padding-left: 30px;
+}
+/* Contact form */
+.contact-form {
+	display: flex;
+	flex-wrap: wrap;
+}
+.contact-form input {
+	background-color: #f5f5f5;
+}
+.contact-form input[type=text] {
+	background-color: #f5f5f5;
+}
+.contact-form input[type=textarea] {
+	
 }
