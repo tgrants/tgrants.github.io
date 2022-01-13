@@ -1,11 +1,40 @@
-{
-    "lastUpdate" : "2022-01-07",
-    "articles" : [
-        {
-            "title" : "Projects made before 2022",
-            "publishedDate" : "2022-01-07",
-            "editedDate" : "2022-01-07",
-            "content" : ""
-        }
-    ]
-}
+[
+    {
+        "title" : "Portfolio website",
+        "publishedDate" : "2022-01-12",
+        "editedDate" : "2022-01-12",
+        "content" : [
+            {
+                "type" : "text",
+                "data" : "My portfolio website is this site you're on right now - its purpose is to showcase my personal projects. It's hosted on GitHub pages - this means I can't use a database to store information so I make do with storing data in a JSON file."
+            }
+        ]
+    },
+    {
+        "title" : "Projects made before 2022",
+        "publishedDate" : "2022-01-07",
+        "editedDate" : "2022-01-12",
+        "content" : [
+            {
+                "type" : "text",
+                "data" : "Stuff, that I've made before 2022:"
+            },
+            {
+                "type" : "text",
+                "data" : "> Gaussian elimination calculator (2021) - Written in C++ as a school assignment, this program can solve linear equations by performing Gaussian elimination on its coefficient matrix. You can download it [here](https://drive.google.com/file/d/1ImFAQ9TtkZKRzNAaSGNnMYR85pwlO_cQ/edit)."
+            },
+            {
+                "type" : "text",
+                "data" : "> After reading about [steganography](https://en.wikipedia.org/wiki/Steganography) - the practice of concealing a message within another message - I knew I had to try it myself. This program can hide a text by splitting and storing it as the least significant bit of an images' pixel colour value. The chages are very miniscule and usually it's impossible to tell the old and new picture apart. You can download it [here](https://drive.google.com/file/d/1pt4hmuV_XpSiqkHbCphR4vyChLfkhZ-c/edit)."
+            },
+            {
+                "type" : "text",
+                "data" : "> 3D Ortographic projection (2019) - This program can draw and rotate any convex shape that consists of triangles. Written in pascal using graph library."
+            },
+            {
+                "type" : "image",
+                "data" : "https://i.ibb.co/j4LksjH/simplex-spin.gif"
+            }
+        ]
+    }
+]

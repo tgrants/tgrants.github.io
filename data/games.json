@@ -1,0 +1,17 @@
+[
+    {
+        "title" : "Driving simulator 2021",
+        "publishedDate" : "2022-01-12",
+        "editedDate" : "2022-01-12",
+        "content" : [
+            {
+                "type" : "text",
+                "data" : "This 2D endless runner is my first game, made as an entry in a game jam. The current version was made in about 6 hours using Unity game engine and it features randomly generated surroundings and obstacles. Right now I'm working on the second version that'd include new features, such as sound. The game can be downloaded [here](https://scheibenwischer.itch.io/driving-simulator-2021)."
+            },
+            {
+                "type" : "image",
+                "data" : "https://i.ibb.co/j8mKLgn/driving-simulator-2021-screenshot.png"
+            }
+        ]
+    }
+]
