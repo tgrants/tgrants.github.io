@@ -25,7 +25,7 @@
             },
             {
                 "type" : "text",
-                "data" : "> After reading about [steganography](https://en.wikipedia.org/wiki/Steganography) - the practice of concealing a message within another message - I knew I had to try it myself. This program can hide a text by splitting and storing it as the least significant bit of an images' pixel colour value. The chages are very miniscule and usually it's impossible to tell the old and new picture apart. You can download it [here](https://drive.google.com/file/d/1pt4hmuV_XpSiqkHbCphR4vyChLfkhZ-c/edit)."
+                "data" : "> Image steganography (2020) - After reading about [steganography](https://en.wikipedia.org/wiki/Steganography) - the practice of concealing a message within another message - I knew I had to try it myself. This program can hide a text by splitting and storing it as the least significant bit of an images' pixel colour value. The chages are very miniscule and usually it's impossible to tell the old and new picture apart. You can download it [here](https://drive.google.com/file/d/1pt4hmuV_XpSiqkHbCphR4vyChLfkhZ-c/edit)."
             },
             {
                 "type" : "text",
