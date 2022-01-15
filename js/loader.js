@@ -1,14 +1,63 @@
-function loadRecent(path, name) {
+function loadRecent(path, id) {
     fetch(path)
     .then((response) => {
         return response.json()
     })
     .then((data) => {
-        // Get element
-        //var = document.getElementById("recent-" + name);
+        var container = document.getElementById(id);
+        let i = 1;
+        data.forEach(article => {
+            if(i > 3){
+                return;
+            }
+            
+            // Get item
+            var item = container.querySelector(".item-" + i);
 
-        // Set names
-        title.textContent = data.name;
+            // Title
+            let titleNode = document.createElement("h2");
+            let titleText = document.createTextNode(article.title);
+            titleNode.appendChild(titleText);
+            item.appendChild(titleNode);
+
+            // Content
+            var hasImage = false;
+            var hasText = false;
+
+            article.content.forEach(element => {
+                if(element.type == "text"){
+                    if(!hasText){
+                        let paragraphNode = document.createElement("p");
+                        paragraphNode.innerHTML = parseText(element.data);
+                        item.appendChild(paragraphNode);
+                        hasText = true;
+                    }
+                }
+                else if(element.type == "image"){
+                    if(!hasImage){
+                        let imageNode = document.createElement("img");
+                        imageNode.setAttribute("src", element.data);
+                        item.appendChild(imageNode);
+                        hasImage = true;
+                    }
+                }
+            });
+
+            // Read more link
+            let linkNode = document.createElement("a");
+            if(id == "recent-projects") {
+                linkNode.setAttribute("href", "projects.html");
+            }
+            else {
+                linkNode.setAttribute("href", "games.html");
+            }
+            linkNode.setAttribute("class", "rm-link");
+            let linkText = document.createTextNode("Read more");
+            linkNode.appendChild(linkText);
+            item.appendChild(linkNode);
+
+            i++;
+        });
     })
 }
 

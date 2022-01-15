@@ -194,6 +194,45 @@ a:active {
 .introduction p {
 	font-size: 1.5rem;
 }
+/* Recent projects and games */
+#recent-projects,
+#recent-games {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.item-1,
+.item-2,
+.item-3 {
+	padding-right: 15px;
+	max-width: 33%;
+}
+.item-1 img,
+.item-2 img,
+.item-3 img {
+	max-width: 100%;
+}
+.item-1 h2,
+.item-2 h2,
+.item-3 h2 {
+	color: #afafaf;
+	font-size: 24px;
+}
+@media screen and (max-width: 700px) {
+	#recent-projects,
+	#recent-games {
+		flex-direction: column !important;
+	}
+	.item-1,
+	.item-2,
+	.item-3 {
+		padding-right: 0;
+		max-width: 100%;
+	}
+}
+.rm-link {
+	color: #f5f5f5;
+}
 /* Hit count */
 .visits {
 	text-align: left;

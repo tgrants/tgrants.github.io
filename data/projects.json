@@ -2,22 +2,30 @@
     {
         "title" : "Portfolio website",
         "publishedDate" : "2022-01-12",
-        "editedDate" : "2022-01-12",
+        "editedDate" : "2022-01-14",
         "content" : [
             {
                 "type" : "text",
-                "data" : "My portfolio website is this site you're on right now - its purpose is to showcase my personal projects. It's hosted on GitHub pages - this means I can't use a database to store information so I make do with storing data in a JSON file."
+                "data" : "My portfolio website is this site you're on right now - its purpose is to showcase my personal projects."
+            },
+            {
+                "type" : "image",
+                "data" : "https://i.ibb.co/RP3Y2kT/portfolio-website.png"
+            },
+            {
+                "type" : "text",
+                "data" : "Hosted using [GitHub Pages](https://pages.github.com/). Projects and games are loaded from JSON files. Page hits are counted with [Count API](https://countapi.xyz/). Email form is handled by [Static forms](https://www.staticforms.xyz/). Social media icons from [simpleicons.org](https://simpleicons.org/). Fonts from [Google Fonts](https://fonts.google.com/)"
             }
         ]
     },
     {
         "title" : "Projects made before 2022",
         "publishedDate" : "2022-01-07",
-        "editedDate" : "2022-01-12",
+        "editedDate" : "2022-01-14",
         "content" : [
             {
                 "type" : "text",
-                "data" : "Stuff, that I've made before 2022:"
+                "data" : "I've made some cool things before making this website, so some of them will be listed here."
             },
             {
                 "type" : "text",
