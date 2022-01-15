@@ -9,8 +9,8 @@ function loadXMLDoc(url) {
 	}
 	xmlhttp.open("GET",url,false);
 	xmlhttp.send(null);
-	document.getElementById('main').innerHTML=xmlhttp.responseText;
+	document.getElementById('content').innerHTML=xmlhttp.responseText;
 }
 document.addEventListener('DOMContentLoaded', (event) => {
-    loadXMLDoc('projects.xml');
+    loadXMLDoc('data/downloads.xml');
 });
