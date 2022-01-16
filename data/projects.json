@@ -1,0 +1,48 @@
+[
+    {
+        "title" : "Portfolio website",
+        "publishedDate" : "2022-01-12",
+        "editedDate" : "2022-01-14",
+        "content" : [
+            {
+                "type" : "text",
+                "data" : "My portfolio website is this site you're on right now - its purpose is to showcase my personal projects."
+            },
+            {
+                "type" : "image",
+                "data" : "https://i.ibb.co/RP3Y2kT/portfolio-website.png"
+            },
+            {
+                "type" : "text",
+                "data" : "Hosted using [GitHub Pages](https://pages.github.com/). Projects and games are loaded from JSON files. Page hits are counted with [Count API](https://countapi.xyz/). Email form is handled by [Static forms](https://www.staticforms.xyz/). Social media icons from [simpleicons.org](https://simpleicons.org/). Fonts from [Google Fonts](https://fonts.google.com/)"
+            }
+        ]
+    },
+    {
+        "title" : "Projects made before 2022",
+        "publishedDate" : "2022-01-07",
+        "editedDate" : "2022-01-14",
+        "content" : [
+            {
+                "type" : "text",
+                "data" : "I've made some cool things before making this website, so some of them will be listed here."
+            },
+            {
+                "type" : "text",
+                "data" : "> Gaussian elimination calculator (2021) - Written in C++ as a school assignment, this program can solve linear equations by performing Gaussian elimination on its coefficient matrix. You can download it [here](https://drive.google.com/file/d/1ImFAQ9TtkZKRzNAaSGNnMYR85pwlO_cQ/edit)."
+            },
+            {
+                "type" : "text",
+                "data" : "> Image steganography (2020) - After reading about [steganography](https://en.wikipedia.org/wiki/Steganography) - the practice of concealing a message within another message - I knew I had to try it myself. This program can hide a text by splitting and storing it as the least significant bit of an images' pixel colour value. The chages are very miniscule and usually it's impossible to tell the old and new picture apart. You can download it [here](https://drive.google.com/file/d/1pt4hmuV_XpSiqkHbCphR4vyChLfkhZ-c/edit)."
+            },
+            {
+                "type" : "text",
+                "data" : "> 3D Ortographic projection (2019) - This program can draw and rotate any convex shape that consists of triangles. Written in pascal using graph library."
+            },
+            {
+                "type" : "image",
+                "data" : "https://i.ibb.co/j4LksjH/simplex-spin.gif"
+            }
+        ]
+    }
+]
