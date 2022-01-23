@@ -1,3 +1,50 @@
+// Paths
+const sectionsPath = 'data/sections.json';
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    const params = getSearchParameters();
+    console.log(params);
+    
+    // decison tree
+    /*  Types
+        - success
+        - home
+        - about
+        - articles
+        - projects
+        - downloads
+    */
+
+    fetch(page)
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        data.forEach( section => {
+            console.log(section);
+            if(section.name != undefined) {
+                if(setting.parameter != undefined) {
+                    
+                }
+                else {
+                    
+                }
+            }
+            else {
+                console.error('section has no name');
+            }
+        })
+    })
+
+    try {
+        loadArticle(params.a);
+    }
+    catch (error) {
+        // Article not found
+        console.error(error);
+    }
+})
+
 function getSearchParameters() {
     const urlSearchParams = new URLSearchParams(window.location.search);
     return Object.fromEntries(urlSearchParams.entries());    
@@ -145,19 +192,3 @@ function markdown(src) {
 
     return src.trim();
 };
-
-window.addEventListener('DOMContentLoaded', (event) => {
-    const params = getSearchParameters();
-    console.log(params);
-    
-    // decison tree
-    /*  Types
-        - success
-        - main
-        - about
-        - articles
-        - downloads
-    */
-
-    loadArticle(params.a);
-})
