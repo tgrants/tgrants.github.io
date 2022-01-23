@@ -1,10 +1,10 @@
-// Paths
-const sectionsPath = 'data/sections.json';
-
 window.addEventListener('DOMContentLoaded', (event) => {
-    const params = getSearchParameters();
-    console.log(params);
+    // Variables
+    const documentBody = document.getElementsByTagName('body')[0];
+    const sectionsPath = 'data/sections.json';
     
+    let params = getSearchParameters();
+
     // decison tree
     /*  Types
         - success
@@ -15,34 +15,44 @@ window.addEventListener('DOMContentLoaded', (event) => {
         - downloads
     */
 
-    fetch(page)
+    fetch(sectionsPath)
     .then((response) => {
         return response.json();
     })
     .then((data) => {
         data.forEach( section => {
-            console.log(section);
-            if(section.name != undefined) {
-                if(setting.parameter != undefined) {
-                    
-                }
-                else {
-                    
+            if(isEmpty(params) && section.default === true) {
+                params[section.name]="";
+            }
+            // Header
+            if(params[section.name] != undefined){
+                documentBody.innerHTML += getDoc(section.header);
+            }
+            // Main
+            if(params[section.name] != undefined){
+                documentBody.innerHTML += getDoc(section.main);
+                // Content
+                const content = document.getElementById("content")
+                if(params[section.name] != undefined){
+                    content.innerHTML += getDoc(section.content);
                 }
             }
-            else {
-                console.error('section has no name');
+            // Footer
+            if(params[section.name] != undefined){
+                documentBody.innerHTML += getDoc(section.footer);
             }
         })
     })
 
+    /*const content = document.getElementById("content");
     try {
         loadArticle(params.a);
     }
     catch (error) {
         // Article not found
         console.error(error);
-    }
+    }*/
+
 })
 
 function getSearchParameters() {
@@ -65,6 +75,15 @@ function loadArticle(articleId) {
         content.innerHTML = markdown(data);
     })
 }
+
+function isEmpty(obj) {
+    for(var prop in obj) {
+      if(Object.prototype.hasOwnProperty.call(obj, prop)) {
+        return false;
+      }
+    }
+    return JSON.stringify(obj) === JSON.stringify({});
+  }
 
 function markdown(src) {
     // Drawdown
@@ -191,4 +210,11 @@ function markdown(src) {
     replace(rx_stash, function(all) { return stash[parseInt(all)] });
 
     return src.trim();
-};
+}
+
+function getDoc(url) {
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET",url,false);
+    xmlhttp.send(null);
+    return xmlhttp.responseText;
+}

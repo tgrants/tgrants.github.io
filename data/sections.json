@@ -3,18 +3,21 @@
         "name" : "home",
         "default" : true,
         "header" : "html/header.html",
+        "main" : "html/main.html",
         "content" : "html/home.html",
         "footer" : "html/footer.html"
     },
     {
         "name" : "about",
         "header" : "html/header.html",
+        "main" : "html/main.html",
         "content" : "html/about.html",
         "footer" : "html/footer.html"
     },
     {
         "name" : "articles",
         "header" : "html/header.html",
+        "main" : "html/main.html",
         "content" : "html/articles.html",
         "footer" : "html/footer.html",
         "parameters" : [
@@ -26,6 +29,7 @@
     {
         "name" : "projects",
         "header" : "html/header.html",
+        "main" : "html/main.html",
         "content" : "html/projects.html",
         "footer" : "html/footer.html",
         "parameters" : [
@@ -37,6 +41,7 @@
     {
         "name" : "downloads",
         "header" : "html/header.html",
+        "main" : "html/main.html",
         "content" : "html/downloads.html",
         "footer" : "html/footer.html",
         "parameters" : [
