@@ -3,7 +3,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const documentBody = document.getElementsByTagName('body')[0];
     const sectionsPath = 'data/sections.json';
     
-    let params = getSearchParameters();
+    let searchParameters = getSearchParameters();
+    // Temp: isdefault should be checked
 
     // decison tree
     /*  Types
@@ -20,28 +21,36 @@ window.addEventListener('DOMContentLoaded', (event) => {
         return response.json();
     })
     .then((data) => {
-        data.forEach( section => {
-            if(isEmpty(params) && section.default === true) {
-                params[section.name]="";
-            }
-            // Header
-            if(params[section.name] != undefined){
-                documentBody.innerHTML += getDoc(section.header);
-            }
-            // Main
-            if(params[section.name] != undefined){
-                documentBody.innerHTML += getDoc(section.main);
-                // Content
-                const content = document.getElementById("content")
-                if(params[section.name] != undefined){
-                    content.innerHTML += getDoc(section.content);
+        if(isEmpty(searchParameters)){
+            searchParameters['no_parameters'] = 'true';
+        }
+        // Loop trough all search parameters
+        var sectionFound = false;
+        for (const param in searchParameters) {
+            // Section check
+            data.forEach(section => {
+                //console.log('param=' + param + ' section=' + section.name);
+                const isDefault = section.default === true && param === 'no_parameters';
+                if(sectionFound === false && (section.name === param || isDefault)) {
+                    // Loop trough render elements in section, add to innerHTML
+                    section.render.forEach( renderElement => {
+                        documentBody.innerHTML += getDoc(renderElement);
+                    })
+                    sectionFound = true;
                 }
+                if(sectionFound === true && section.parameters != undefined) {
+                    section.parameters.forEach( p => {
+                        if(p.name === param) {
+                            console.log(p.name);
+                        }
+                    })
+                }
+            })
+            if(!sectionFound) {
+                // Section not found, 404
+                document.location.href = '404.html';
             }
-            // Footer
-            if(params[section.name] != undefined){
-                documentBody.innerHTML += getDoc(section.footer);
-            }
-        })
+        }
     })
 
     /*const content = document.getElementById("content");

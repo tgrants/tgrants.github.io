@@ -2,36 +2,43 @@
     {
         "name" : "home",
         "default" : true,
-        "header" : "html/header.html",
-        "main" : "html/main.html",
-        "content" : "html/home.html",
-        "footer" : "html/footer.html"
+        "render" : [
+            "html/header.html",
+            "html/home.html",
+            "html/footer.html"
+        ]
     },
     {
         "name" : "about",
-        "header" : "html/header.html",
-        "main" : "html/main.html",
-        "content" : "html/about.html",
-        "footer" : "html/footer.html"
+        "render" : [
+            "html/header.html",
+            "html/about.html",
+            "html/footer.html"
+        ]
     },
     {
         "name" : "articles",
-        "header" : "html/header.html",
-        "main" : "html/main.html",
-        "content" : "html/articles.html",
-        "footer" : "html/footer.html",
+        "render" : [
+            "html/header.html",
+            "html/articles.html",
+            "html/footer.html"
+        ],
         "parameters" : [
             {
                 "name" : "id"
+            },
+            {
+                "name" : "a"
             }
         ]
     },
     {
         "name" : "projects",
-        "header" : "html/header.html",
-        "main" : "html/main.html",
-        "content" : "html/projects.html",
-        "footer" : "html/footer.html",
+        "render" : [
+            "html/header.html",
+            "html/projects.html",
+            "html/footer.html"
+        ],
         "parameters" : [
             {
                 "name" : "id"
@@ -40,14 +47,21 @@
     },
     {
         "name" : "downloads",
-        "header" : "html/header.html",
-        "main" : "html/main.html",
-        "content" : "html/downloads.html",
-        "footer" : "html/footer.html",
+        "render" : [
+            "html/header.html",
+            "html/downloads.html",
+            "html/footer.html"
+        ],
         "parameters" : [
             {
                 "name" : "id"
             }
+        ]
+    },
+    {
+        "name" : "success",
+        "render" : [
+            "html/success.html"
         ]
     }
 ]
