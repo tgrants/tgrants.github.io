@@ -2,51 +2,41 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // Variables
     const documentBody = document.getElementsByTagName('body')[0];
     const sectionsPath = 'data/sections.json';
-    
-    let searchParameters = getSearchParameters();
-    // Temp: isdefault should be checked
 
-    // decison tree
-    /*  Types
-        - success
-        - home
-        - about
-        - articles
-        - projects
-        - downloads
-    */
+    let searchParameters = new URLSearchParams(window.location.search);
+    if(isEmpty(searchParameters)){
+        searchParameters.append('no_parameters', 'true');
+    }
 
     fetch(sectionsPath)
     .then((response) => {
         return response.json();
     })
     .then((data) => {
-        if(isEmpty(searchParameters)){
-            searchParameters['no_parameters'] = 'true';
-        }
         // Loop trough all search parameters
         var sectionFound = false;
-        for (const param in searchParameters) {
+        for (const [param, value] of searchParameters){
             // Section check
             data.forEach(section => {
-                //console.log('param=' + param + ' section=' + section.name);
                 const isDefault = section.default === true && param === 'no_parameters';
                 if(sectionFound === false && (section.name === param || isDefault)) {
                     // Loop trough render elements in section, add to innerHTML
                     section.render.forEach( renderElement => {
                         documentBody.innerHTML += getDoc(renderElement);
                     })
-                    sectionFound = true;
+                    sectionFound = section;
                 }
-                if(sectionFound === true && section.parameters != undefined) {
-                    section.parameters.forEach( p => {
+                else if (sectionFound.name === section.name && sectionFound.parameters != undefined) {
+                    sectionFound.parameters.forEach(p => {
                         if(p.name === param) {
-                            console.log(p.name);
+                            console.log(p.call);
+                            // Call function
+                            window[p.call](value);
                         }
                     })
                 }
             })
-            if(!sectionFound) {
+            if(sectionFound === false) {
                 // Section not found, 404
                 document.location.href = '404.html';
             }

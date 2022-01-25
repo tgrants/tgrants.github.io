@@ -25,10 +25,8 @@
         ],
         "parameters" : [
             {
-                "name" : "id"
-            },
-            {
-                "name" : "a"
+                "name" : "id",
+                "call" : "loadArticle"
             }
         ]
     },
