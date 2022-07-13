@@ -15,4 +15,6 @@
 
 [link text](http://www.google.com)
 
-![Driving simulator 2021 screenshot](https://i.ibb.co/j8mKLgn/driving-simulator-2021-screenshot.png)
+![Image](https://i.imgur.com/mkl5xMG.jpeg)
+
+Normal text

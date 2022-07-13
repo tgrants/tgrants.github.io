@@ -1,88 +1,32 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-    // Variables
-    const documentBody = document.getElementsByTagName('body')[0];
-    const sectionsPath = 'data/sections.json';
-
+$(document).ready(() => {
     let searchParameters = new URLSearchParams(window.location.search);
-    if(isEmpty(searchParameters)){
-        searchParameters.append('no_parameters', 'true');
-    }
+    console.log(searchParameters);
 
-    fetch(sectionsPath)
-    .then((response) => {
-        return response.json();
-    })
-    .then((data) => {
-        // Loop trough all search parameters
-        var sectionFound = false;
-        for (const [param, value] of searchParameters){
-            // Section check
-            data.forEach(section => {
-                const isDefault = section.default === true && param === 'no_parameters';
-                if(sectionFound === false && (section.name === param || isDefault)) {
-                    // Loop trough render elements in section, add to innerHTML
-                    section.render.forEach( renderElement => {
-                        documentBody.innerHTML += getDoc(renderElement);
-                    })
-                    sectionFound = section;
-                }
-                else if (sectionFound.name === section.name && sectionFound.parameters != undefined) {
-                    sectionFound.parameters.forEach(p => {
-                        if(p.name === param) {
-                            console.log(p.call);
-                            // Call function
-                            window[p.call](value);
-                        }
-                    })
-                }
-            })
-            if(sectionFound === false) {
-                // Section not found, 404
-                document.location.href = '404.html';
-            }
-        }
-    })
+    loadPage("articles");
+    loadArticle("test");
 
-    /*const content = document.getElementById("content");
-    try {
-        loadArticle(params.a);
-    }
-    catch (error) {
-        // Article not found
-        console.error(error);
-    }*/
+    $("#year").text(new Date().getFullYear());
+});
 
-})
+function loadPage(page) {
+    let file = "data/pages/" + page + ".html";
 
-function getSearchParameters() {
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    return Object.fromEntries(urlSearchParams.entries());    
+    $.ajax({
+        url: file,
+        success: (result) => { $("#content").html(result); },
+        error: () => { console.error("Could not load page " + file) }
+    });
 }
 
-function loadArticle(articleId) {
-    const content = document.getElementById("content");
+function loadArticle(article) {
+    let file = "data/articles/" + article + ".md";
 
-    fetch('data/articles/' + articleId + '.md')
-    .then((response) => {
-        console.log(response);
-        if(response.ok != false) {
-            return response.text();
-        }
-        throw 'response not ok';
-    })
-    .then((data) => {
-        content.innerHTML = markdown(data);
-    })
+    $.ajax({
+        url: file,
+        success: (result) => { $("#articles").html(markdown(result)); console.log(result)},
+        error: () => { console.error("Could not load article " + file) }
+    });
 }
-
-function isEmpty(obj) {
-    for(var prop in obj) {
-      if(Object.prototype.hasOwnProperty.call(obj, prop)) {
-        return false;
-      }
-    }
-    return JSON.stringify(obj) === JSON.stringify({});
-  }
 
 function markdown(src) {
     // Drawdown
@@ -113,7 +57,8 @@ function markdown(src) {
     }
 
     function element(tag, content) {
-        return '<' + tag + '>' + content + '</' + tag + '>';
+        // Adds class to all elements
+        return '<' + tag + ' class="markdown">' + content + '</' + tag + '>';
     }
 
     function blockquote(src) {
@@ -209,11 +154,4 @@ function markdown(src) {
     replace(rx_stash, function(all) { return stash[parseInt(all)] });
 
     return src.trim();
-}
-
-function getDoc(url) {
-    xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET",url,false);
-    xmlhttp.send(null);
-    return xmlhttp.responseText;
 }
