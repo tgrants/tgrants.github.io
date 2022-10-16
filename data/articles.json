@@ -1,0 +1,26 @@
+[
+	{
+		"link" : "portfolio-website",
+		"title" : "Portfolio website",
+		"published" : "2022-01-12",
+		"edited" : "2022-01-14",
+		"text" : "My portfolio website is this site you're on right now - its purpose is to showcase my personal projects.",
+		"thumbnail" : "https://i.ibb.co/RP3Y2kT/portfolio-website.png"
+	},
+	{
+		"link" : "projects-made-before-2022",
+		"title" : "Projects made before 2022",
+		"published" : "2022-01-07",
+		"edited" : "2022-01-14",
+		"text" : "I've worked on some interesting things before making this website, some of them will be listed here.",
+		"thumbnail" : "https://i.ibb.co/j4LksjH/simplex-spin.gif"
+	},
+	{
+		"link" : "driving-simulator-2021",
+		"title" : "Driving Simulator 2021",
+		"published" : "2022-01-12",
+		"edited" : "2022-01-14",
+		"text" : "This 2D endless runner is my first game, made as an entry in a game jam. I made it in about 6 hours using Unity game engine and it features randomly generated surroundings and obstacles.",
+		"thumbnail" : "https://i.ibb.co/j8mKLgn/driving-simulator-2021-screenshot.png"
+	}
+]
