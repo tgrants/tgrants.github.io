@@ -10,6 +10,16 @@ $(document).ready(() => {
 				// Page not found
 				console.log("Page '" + value + "' not found");
 			}
+			else {
+				if (page == "home") {
+					loadRecent("data/articles.json", "recent-projects");
+					break;
+				}
+				else if (page == "articles" && Array.from(searchParameters).length == 1) {
+					loadAll("data/articles.json", "recent-projects");
+					break;
+				}
+			}
 		}
 		else {
 			if (page == "articles") {

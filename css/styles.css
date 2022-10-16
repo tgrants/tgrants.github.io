@@ -162,7 +162,8 @@ h4.markdown,
 h5.markdown,
 h6.markdown,
 p.markdown,
-a.markdown {
+a.markdown,
+ul.markdown{
 	font-family: 'Roboto';
 	color: #f5f5f5;
 }
@@ -193,8 +194,9 @@ h5.markdown,
 .markdown h6 {
 	font-size: 0.67em;
 }
-/* Paragraph */
-.markdown p {
+/* Paragraph and list */
+.markdown p,
+.markdown ul {
 	font-size: 1em;
 }
 /* Horizontal rule */
@@ -229,4 +231,92 @@ p.markdown > img {
 	flex: 1 0 auto;
 	padding: 30px 15px;
 	width: auto;
+}
+@media screen and (min-width: 700px) {
+	#content {
+		padding: 30px 100px;
+	}
+}
+
+/* index.html */
+/* Introduction */
+.introduction {
+	text-align: left;
+	padding: 20px 0 35px;
+}
+.introduction h1 {
+	font-family: "Arial";
+	font-size: 3rem;
+}
+.introduction p {
+	font-size: 1.5rem;
+}
+/* Recent projects */
+#recent-projects {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.item-1,
+.item-2,
+.item-3 {
+	padding-right: 15px;
+	max-width: 33%;
+}
+.item-1 img,
+.item-2 img,
+.item-3 img {
+	max-width: 100%;
+}
+.item-1 h2,
+.item-2 h2,
+.item-3 h2 {
+	color: #afafaf;
+	font-size: 24px;
+}
+/* Hit count */
+.visits {
+	text-align: left;
+}
+.visits th {
+	font-family: "Roboto";
+	color: #afafaf;
+	font-size: 1.6rem;
+}
+.hits {
+	color: #ffb555 !important;
+	padding-left: 30px;
+}
+
+/* downloads.html */
+.downloads-table {
+	color: #f5f5f5;
+	background-color: #323449;
+	border: 1px solid #f5f5f5;
+	border-collapse: collapse;
+	font-family: "Roboto";
+}
+.downloads-table tr,
+.downloads-table td {
+	border: 1px solid #f5f5f5;
+	padding: 4px;
+}
+
+/* articles.html */
+#content .article {
+	max-width: 600px;
+}
+#content .date {
+	color: #afafaf;
+	font-size: 12px;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+#content .article-paragraph {
+	padding-bottom: 10px;
+}
+#content .article-image {
+	width: auto;
+	width: 100%;
+	padding-bottom: 10px;
 }
