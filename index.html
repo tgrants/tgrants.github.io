@@ -7,13 +7,33 @@
 		<meta name="keywords" content="Toms Grants, portfolio">
 		<meta name="description" content="My projects">
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="js/theme.js"></script>
 		<script src="js/main.js"></script>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
 		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
 	</head>
 	<body>
-		<header>
+		<header class="header">
+			<h1 class="header-title">Toms Grants</h1>
+			<nav class="header-navigation" id="nav-long">
+				<a href="?home">Home</a>
+				<a href="?about">About me</a>
+				<a href="?articles">Articles</a>
+				<a href="?downloads">Downloads</a>
+			</nav>
+			<nav class="header-navigation" id="nav-short">
+				<a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</nav>
 		</header>
+		<nav id="nav-bottom">
+			<a href="?home">Home</a>
+			<a href="?about">About me</a>
+			<a href="?articles">Articles</a>
+			<a href="?downloads">Downloads</a>
+		</nav>
 		<div id="content">
 		</div>
 		<footer>

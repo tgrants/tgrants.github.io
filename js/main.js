@@ -1,13 +1,27 @@
 $(document).ready(() => {
 	let searchParameters = new URLSearchParams(window.location.search);
-	console.log(searchParameters);
+	if (!window.location.search.includes('?')) searchParameters.append("home", "");
 
+	let page;
 	for (const [param, value] of searchParameters) {
-		console.log(param, value)
+		if (value == "") {
+			page = param;
+			if(loadPage(page) == false) {
+				// Page not found
+				console.log("Page '" + value + "' not found");
+			}
+		}
+		else {
+			if (page == "articles") {
+				if (param == "name") {
+					if (loadArticle(value) == false) {
+						// Article not found
+						console.log("Article '" + value + "' not found");
+					}
+				}
+			}
+		}
 	}
-	
-	//loadPage("articles");
-	//loadArticle("test");
 
 	$("#year").text(new Date().getFullYear());
 });
@@ -17,8 +31,8 @@ function loadPage(page) {
 
 	$.ajax({
 		url: file,
-		success: (result) => { $("#content").html(result); },
-		error: () => { console.error("Could not load page " + file) }
+		success: (result) => { $("#content").html(result); return true; },
+		error: () => { console.error("Could not load page " + file); return false; }
 	});
 }
 
@@ -27,8 +41,8 @@ function loadArticle(article) {
 
 	$.ajax({
 		url: file,
-		success: (result) => { $("#articles").html(markdown(result)); },
-		error: () => { console.error("Could not load article " + file) }
+		success: (result) => { $("#articles").html(markdown(result)); return true; },
+		error: () => { console.error("Could not load article " + file); return false; }
 	});
 }
 
