@@ -25,11 +25,12 @@ function loadRecent(path, id) {
 
 			let imageNode = document.createElement("img");
 			imageNode.setAttribute("src", article.thumbnail);
+			imageNode.setAttribute("alt", article.thumbnail_alt);
 			item.appendChild(imageNode);
 
 			// Read more link
 			let linkNode = document.createElement("a");
-			linkNode.setAttribute("href", "?articles&name=" + article.link);
+			linkNode.setAttribute("href", "/?articles&name=" + article.link);
 			linkNode.setAttribute("class", "rm-link");
 			let linkText = document.createTextNode("Read more");
 			linkNode.appendChild(linkText);
@@ -86,12 +87,13 @@ function loadAll(path) {
 
 			let imageNode = document.createElement("img");
 			imageNode.setAttribute("src", article.thumbnail);
+			imageNode.setAttribute("alt", article.thumbnail_alt);
 			imageNode.setAttribute("class", "article-image");
 			articleNode.appendChild(imageNode);
 
 			// Read more link
 			let linkNode = document.createElement("a");
-			linkNode.setAttribute("href", "?articles&name=" + article.link);
+			linkNode.setAttribute("href", "/?articles&name=" + article.link);
 			linkNode.setAttribute("class", "rm-link");
 			let linkText = document.createTextNode("Read more");
 			linkNode.appendChild(linkText);

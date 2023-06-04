@@ -85,7 +85,7 @@ a:active {
 	text-decoration: underline !important;
 	text-decoration-thickness: 1px !important;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 	#nav-long {
 		display: none;
 	}
@@ -93,7 +93,7 @@ a:active {
 		display: block;
 	}
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
 	#nav-long {
 		display: block;
 	}
@@ -116,8 +116,15 @@ a:active {
 	text-decoration: none !important;
 }
 .icon {
-	padding-left: 0px !important;
+	border: none;
+	background: none;
+	width: auto;
 }
+.icon > img {
+	width: 30px;
+	filter: brightness(0) invert(1);
+}
+.icon > img:hover { filter: invert(66%) sepia(93%) saturate(356%) hue-rotate(336deg) brightness(103%) contrast(101%); }
 
 /* FOOTER */
 footer {
@@ -308,6 +315,10 @@ p.markdown > img {
 	border-collapse: collapse;
 	font-family: "Roboto";
 }
+.downloads-table th {
+	background-color: #1d1e2b;
+}
+.downloads-table th,
 .downloads-table tr,
 .downloads-table td {
 	border: 1px solid #f5f5f5;
