@@ -127,6 +127,7 @@ a:active {
 .icon > img:hover { filter: invert(66%) sepia(93%) saturate(356%) hue-rotate(336deg) brightness(103%) contrast(101%); }
 
 /* FOOTER */
+
 footer {
 	flex-shrink: 0;
 	display: flex;
@@ -135,27 +136,24 @@ footer {
 	background: #11121a;
 	padding: 27px 20px;
 }
+
 #footer-navigation {
 	display: flex;
 	flex-direction: row;
 }
+
 .footer-icon {
 	fill: #f5f5f5;
 	width: 34px;
 	padding: 0 9px;
 }
-.twitter-icon:hover {
-	fill: #1DA1F2;
-}
-.github-icon:hover {
-	fill: #a5a5a5;
-}
-.itchio-icon:hover {
-	fill: #fa5c5c;
-}
-.youtube-icon:hover {
-	fill: #FF0000;
-}
+
+/* https://codepen.io/sosuke/pen/Pjoqqp */
+.github-icon:hover { filter: invert(61%) sepia(73%) saturate(0%) hue-rotate(207deg) brightness(94%) contrast(93%); }
+.twitter-icon:hover { filter: invert(57%) sepia(49%) saturate(3510%) hue-rotate(175deg) brightness(96%) contrast(98%); }
+.youtube-icon:hover { filter: invert(30%) sepia(94%) saturate(7230%) hue-rotate(355deg) brightness(96%) contrast(123%); }
+.itchio-icon:hover { filter: invert(52%) sepia(61%) saturate(3035%) hue-rotate(325deg) brightness(99%) contrast(98%); }
+
 .copyright-notice {
 	padding-top: 10px;
 }
@@ -181,6 +179,7 @@ h3.markdown,
 h4.markdown,
 h5.markdown,
 .markdown h6 {
+	padding-top: 0.4em;
 	font-weight: bold;
 }
 .markdown h1 {
@@ -259,6 +258,9 @@ p.markdown > img {
 	font-size: 1.5rem;
 }
 /* Recent projects */
+.recent-projects > h2 {
+	padding-top: 0.5em;
+}
 #recent-projects {
 	display: flex;
 	flex-direction: row;
