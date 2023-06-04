@@ -6,6 +6,8 @@ I've made some cool things before making this website, so some of them will be l
 
 Written in C++ as a school assignment, this program can solve linear equations by performing Gaussian elimination on its coefficient matrix. You can download it [here](https://drive.google.com/file/d/1ImFAQ9TtkZKRzNAaSGNnMYR85pwlO_cQ/edit).
 
+![Gaussian elimination calculator console output](https://i.ibb.co/f0S9GGH/gaussian-elimination-calculator.webp)
+
 ## Image steganography (2020)
 
 After reading about [steganography](https://en.wikipedia.org/wiki/Steganography) - the practice of concealing a message within another message - I knew I had to try it myself.
@@ -17,4 +19,4 @@ You can download it [here](https://drive.google.com/file/d/1pt4hmuV_XpSiqkHbCphR
 
 This program can draw and rotate any convex shape that consists of triangles. Written in pascal using graph library.
 
-![Spinning simplex](https://i.ibb.co/j4LksjH/simplex-spin.gif)
+![Spinning simplex](https://i.ibb.co/7NKvkBj/simplex-spin.webp)

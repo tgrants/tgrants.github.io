@@ -2,7 +2,7 @@
 
 My portfolio website is this site you're on right now - its purpose is to showcase my personal projects.
 
-![Portfolio website screenshot](https://i.ibb.co/RP3Y2kT/portfolio-website.png)
+![Portfolio website screenshot](https://i.ibb.co/kgsrsnn/portfolio-website.webp)
 
 * Hosted using [GitHub Pages](https://pages.github.com/)
 * Data is loaded from markdown and JSON files
