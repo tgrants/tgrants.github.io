@@ -26,5 +26,19 @@
 		"date" : "2022-06-28",
 		"link" : "https://github.com/klappscheinwerfer/GetFolderSize/releases/download/v0.1/GetFolderSize.exe",
 		"text" : "Executable (Win)"
+	},
+	{
+		"id" : 5,
+		"name" : "laser-cnc",
+		"date" : "2023-06-20",
+		"link" : "https://drive.google.com/file/d/13kYF0RGUHQcnH1A3Qb2YY5ELIiKCQKQB/",
+		"text" : "ZIP Archive (Linux)"
+	},
+	{
+		"id" : 6,
+		"name" : "laser-controller",
+		"date" : "2023-06-20",
+		"link" : "https://drive.google.com/file/d/1MVkv_5JC_xOgNX5jXrXN-LsVBaqfXLrD/",
+		"text" : "ZIP Archive (Linux)"
 	}
 ]

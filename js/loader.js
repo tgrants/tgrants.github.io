@@ -32,7 +32,7 @@ function loadRecent(path, id) {
 			let linkNode = document.createElement("a");
 			linkNode.setAttribute("href", "/?articles&name=" + article.link);
 			linkNode.setAttribute("class", "rm-link");
-			let linkText = document.createTextNode("Read more");
+			let linkText = document.createTextNode("Go to the article");
 			linkNode.appendChild(linkText);
 			item.appendChild(linkNode);
 
@@ -95,7 +95,7 @@ function loadAll(path) {
 			let linkNode = document.createElement("a");
 			linkNode.setAttribute("href", "/?articles&name=" + article.link);
 			linkNode.setAttribute("class", "rm-link");
-			let linkText = document.createTextNode("Read more");
+			let linkText = document.createTextNode("Go to the article");
 			linkNode.appendChild(linkText);
 			articleNode.appendChild(linkNode);
 
