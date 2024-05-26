@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(document).ready(async () => {
 	let searchParameters = new URLSearchParams(window.location.search);
 	if (!window.location.search.includes('?')) searchParameters.append("home", "");
 
@@ -6,11 +6,8 @@ $(document).ready(() => {
 	for (const [param, value] of searchParameters) {
 		if (value == "") {
 			page = param;
-			if(loadPage(page) == false) {
-				// Page not found
-				console.log("Page '" + value + "' not found");
-			}
-			else {
+			let result = await loadPage(page);
+			if (result) {
 				if (page == "home") {
 					loadRecent("data/articles.json", "recent-projects");
 					break;
@@ -19,6 +16,9 @@ $(document).ready(() => {
 					loadAll("data/articles.json", "recent-projects");
 					break;
 				}
+			} else {
+				// Page not found
+				console.log("Page '" + value + "' not found");
 			}
 		}
 		else {
@@ -39,10 +39,18 @@ $(document).ready(() => {
 function loadPage(page) {
 	let file = "data/pages/" + page + ".html";
 
-	$.ajax({
-		url: file,
-		success: (result) => { $("#content").html(result); return true; },
-		error: () => { console.error("Could not load page " + file); return false; }
+	return new Promise((resolve, reject) => {
+		$.ajax({
+			url: file,
+			success: (result) => {
+				$("#content").html(result);
+				resolve(true);
+			},
+			error: () => {
+				console.error("Could not load page " + file);
+				resolve(false);
+			}
+		});
 	});
 }
 

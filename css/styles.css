@@ -276,12 +276,14 @@ p.markdown > img {
 .item-2 img,
 .item-3 img {
 	max-width: 100%;
+	padding-top: 5px;
 }
 .item-1 h2,
 .item-2 h2,
 .item-3 h2 {
 	color: #afafaf;
 	font-size: 24px;
+	padding-bottom: 5px;
 }
 @media screen and (max-width: 700px) {
 	#recent-projects,

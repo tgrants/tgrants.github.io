@@ -14,10 +14,13 @@ function loadRecent(path, id) {
 
 			// Title
 			let titleNode = document.createElement("h2");
-			let titleText = document.createTextNode(article.title);
-			titleNode.appendChild(titleText);
+			let linkNode = document.createElement("a");
+			linkNode.setAttribute("href", "/?articles&name=" + article.link);
+			let linkText = document.createTextNode(article.title);
+			linkNode.appendChild(linkText);
+			titleNode.appendChild(linkNode);
 			item.appendChild(titleNode);
-
+			
 			// Content
 			let paragraphNode = document.createElement("p");
 			paragraphNode.innerHTML = article.text;
@@ -27,14 +30,6 @@ function loadRecent(path, id) {
 			imageNode.setAttribute("src", article.thumbnail);
 			imageNode.setAttribute("alt", article.thumbnail_alt);
 			item.appendChild(imageNode);
-
-			// Read more link
-			let linkNode = document.createElement("a");
-			linkNode.setAttribute("href", "/?articles&name=" + article.link);
-			linkNode.setAttribute("class", "rm-link");
-			let linkText = document.createTextNode("Go to the article");
-			linkNode.appendChild(linkText);
-			item.appendChild(linkNode);
 
 			i++;
 		});
