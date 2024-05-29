@@ -9,6 +9,13 @@ $(document).ready(async () => {
 			let result = await loadPage(page);
 			if (result) {
 				if (page == "home") {
+					today = new Date;
+					getHitCount("total", "hits-total");
+					// Key needs to be at least 3 characters long
+					getHitCount("Y" + today.getFullYear(), "hits-yearly");
+					getHitCount("Y" + today.getFullYear() + "M" + today.getMonth(), "hits-monthly");
+					getHitCount("Y" + today.getFullYear() + "M" + today.getMonth() + "daily" + today.getDate(), "hits-daily");
+
 					loadRecent("data/articles.json", "recent-projects");
 					break;
 				}
@@ -194,7 +201,7 @@ function markdown(src) {
 
 function getHitCount(key, classname) {
 	var xhr = new XMLHttpRequest();
-	xhr.open("GET", "https://api.countapi.xyz/hit/tomsgrants.com/" + key);
+	xhr.open("GET", "https://abacus.jasoncameron.dev/hit/hits.tomsgrants.com/" + key);
 	xhr.responseType = "json";
 	xhr.onload = function() {
 		document.getElementsByClassName(classname)[0].innerText = this.response.value;
