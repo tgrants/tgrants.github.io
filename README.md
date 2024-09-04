@@ -15,6 +15,6 @@ Source code: [Github](https://github.com/tgrants/tgrants.github.io)
 
 ## Development environment
 
-* Clone repository: `git clone https://github.com/klappscheinwerfer/klappscheinwerfer.github.io`
-* Change directory: `cd klappscheinwerfer.github.io`
+* Clone repository: `git clone https://github.com/tgrants/tgrants.github.io`
+* Change directory: `cd tgrants.github.io`
 * Start web server: `python3 -m http.server -d .`
