@@ -1,5 +1,14 @@
 [
 	{
+		"link" : "cet",
+		"title" : "CET",
+		"published" : "2024-09-14",
+		"edited" : "2024-09-14",
+		"text" : "A website for practicing for Latvian centralized exam tests.",
+		"thumbnail" : "https://i.ibb.co/cb45bsT/cet.webp",
+		"thumbnail_alt" : "Screenshot of the CET website"
+	},
+	{
 		"link" : "backrooms-game",
 		"title" : "Backrooms game",
 		"published" : "2024-05-26",
@@ -30,7 +39,7 @@
 		"link" : "driving-simulator-2021",
 		"title" : "Driving Simulator 2021",
 		"published" : "2022-01-12",
-		"edited" : "2022-01-14",
+		"edited" : "2024-09-14",
 		"text" : "This 2D endless runner is my first game, made as an entry in a game jam. I made it in about 6 hours using Unity game engine and it features randomly generated surroundings and obstacles.",
 		"thumbnail" : "https://i.ibb.co/j8mKLgn/driving-simulator-2021-screenshot.png",
 		"thumbnail_alt" : "Screenshot of the game"
