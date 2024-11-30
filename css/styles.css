@@ -30,7 +30,7 @@ p {
 
 /* Horizontal rule */
 hr {
-	border-color: #a5a5a5;
+	border-color: #3f3f3f;
 	border-top-width: 0px;
 	margin-top: 1em;
 	margin-bottom: 1em;
@@ -61,7 +61,13 @@ a:active {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	padding: 20px 40px;
+	padding: 20px 100px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 700px) {
+	.header {
+		padding: 20px 15px;
+	}
 }
 .header a {
 	font-size: 20px;
