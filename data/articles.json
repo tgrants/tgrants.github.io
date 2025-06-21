@@ -1,12 +1,12 @@
 [
 	{
-		"link" : "cet",
-		"title" : "CET",
+		"link" : "cpket",
+		"title" : "CPKET",
 		"published" : "2024-09-14",
-		"edited" : "2024-09-14",
+		"edited" : "2025-06-21",
 		"text" : "A website for practicing for Latvian centralized exam tests.",
 		"thumbnail" : "https://i.ibb.co/cb45bsT/cet.webp",
-		"thumbnail_alt" : "Screenshot of the CET website"
+		"thumbnail_alt" : "Screenshot of the CPKET website"
 	},
 	{
 		"link" : "backrooms-game",
