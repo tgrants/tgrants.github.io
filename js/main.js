@@ -1,15 +1,15 @@
-$(document).ready(async () => {
-	let searchParameters = new URLSearchParams(window.location.search);
+document.addEventListener("DOMContentLoaded", async function() {
+	const searchParameters = new URLSearchParams(window.location.search);
 	if (!window.location.search.includes('?')) searchParameters.append("home", "");
 
 	let page;
 	for (const [param, value] of searchParameters) {
-		if (value == "") {
+		if (value === "") {
 			page = param;
-			let result = await loadPage(page);
+			const result = await loadPage(page);
 			if (result) {
-				if (page == "home") {
-					today = new Date;
+				if (page === "home") {
+					const today = new Date;
 					getHitCount("total", "hits-total");
 					// Key needs to be at least 3 characters long
 					getHitCount("Y" + today.getFullYear(), "hits-yearly");
@@ -19,55 +19,63 @@ $(document).ready(async () => {
 					loadRecent("data/articles.json", "recent-projects");
 					break;
 				}
-				else if (page == "articles" && Array.from(searchParameters).length == 1) {
+				else if (page === "articles" && Array.from(searchParameters).length === 1) {
 					loadAll("data/articles.json", "recent-projects");
 					break;
 				}
 			} else {
 				// Page not found
-				console.log("Page '" + value + "' not found");
+				console.error(`Page '${page}' not found`);
 			}
 		}
 		else {
-			if (page == "articles") {
-				if (param == "name") {
+			if (page === "articles") {
+				if (param === "name") {
 					if (loadArticle(value) == false) {
 						// Article not found
-						console.log("Article '" + value + "' not found");
+						console.log(`Article '${value}' not found`);
 					}
 				}
 			}
 		}
 	}
 
-	$("#year").text(new Date().getFullYear());
+	document.querySelector("#year").textContent = new Date().getFullYear();
 });
 
-function loadPage(page) {
-	let file = "data/pages/" + page + ".html";
+async function loadPage(page) {
+	const file = `data/pages/${page}.html`;
 
-	return new Promise((resolve, reject) => {
-		$.ajax({
-			url: file,
-			success: (result) => {
-				$("#content").html(result);
-				resolve(true);
-			},
-			error: () => {
-				console.error("Could not load page " + file);
-				resolve(false);
-			}
-		});
+	return fetch(file)
+	.then(response => {
+		if (!response.ok) throw new Error(`HTTP ${response.status}`);
+		return response.text();
+	})
+	.then(result => {
+		document.getElementById('content').innerHTML = result;
+		return true;
+	})
+	.catch(err => {
+		console.error(`Could not load page ${file}:`, err);
+		return false;
 	});
 }
 
 function loadArticle(article) {
-	let file = "data/articles/" + article + ".md";
+	const file = `data/articles/${article}.md`;
 
-	$.ajax({
-		url: file,
-		success: (result) => { $("#articles").html(markdown(result)); return true; },
-		error: () => { console.error("Could not load article " + file); return false; }
+	fetch(file)
+	.then(response => {
+		if (!response.ok) throw new Error(`HTTP ${response.status}`);
+		return response.text();
+	})
+	.then(result => {
+		document.getElementById('articles').innerHTML = markdown(result);
+		return true;
+	})
+	.catch(err => {
+		console.error(`Could not load article ${file}:`, err);
+		return false;
 	});
 }
 
@@ -200,11 +208,26 @@ function markdown(src) {
 }
 
 function getHitCount(key, classname) {
-	var xhr = new XMLHttpRequest();
-	xhr.open("GET", "https://abacus.jasoncameron.dev/hit/hits.tomsgrants.com/" + key);
-	xhr.responseType = "json";
-	xhr.onload = function() {
-		document.getElementsByClassName(classname)[0].innerText = this.response.value;
-	}
-	xhr.send();
+	const url = `https://abacus.jasoncameron.dev/hit/hits.tomsgrants.com/${key}`;
+
+	fetch(url)
+	.then(response => {
+		if (!response.ok) throw new Error(`HTTP ${response.status}`);
+		return response.json();
+	})
+	.then(data => {
+		const element = document.getElementsByClassName(classname)[0];
+		if (element && data && typeof data.value !== "undefined") {
+			element.innerText = data.value;
+		}
+	})
+	.catch(error => {
+		console.error(`Failed to fetch hit count for key "${key}":`, error);
+	});
+}
+
+function toggleNavbar() {
+	const x = document.getElementById("nav-bottom");
+	if (x.style.display === "flex") x.style.display = "none";
+	else x.style.display = "flex";
 }
