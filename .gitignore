@@ -1,1 +1,3 @@
-*.sh
+# Local files and directories
+*.local
+*.local.*

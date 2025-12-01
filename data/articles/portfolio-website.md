@@ -6,6 +6,7 @@ My portfolio website is this site you're on right now - its purpose is to showca
 
 * Hosted using [GitHub Pages](https://pages.github.com/)
 * Data is loaded from markdown and JSON files
-* Page hits are counted with [Count API](https://countapi.xyz/)
+* Page hits are counted with [Abacus](https://github.com/JasonLovesDoggo/abacus)
+* Images are hosted with [ImgBB](https://imgbb.com/)
 * Social media icons from [simpleicons.org](https://simpleicons.org/)
 * Fonts from [Google Fonts](https://fonts.google.com/)
