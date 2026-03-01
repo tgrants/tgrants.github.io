@@ -161,6 +161,7 @@ footer {
 
 /* https://codepen.io/sosuke/pen/Pjoqqp */
 .github-icon:hover { filter: invert(61%) sepia(73%) saturate(0%) hue-rotate(207deg) brightness(94%) contrast(93%); }
+.gitlab-icon:hover { filter: invert(62%) sepia(26%) saturate(1264%) hue-rotate(352deg) brightness(107%) contrast(98%); }
 .linkedin-icon:hover { filter: invert(25%) sepia(52%) saturate(3180%) hue-rotate(197deg) brightness(98%) contrast(92%); }
 .bluesky-icon:hover { filter: invert(47%) sepia(62%) saturate(6005%) hue-rotate(195deg) brightness(102%) contrast(102%); }
 .twitter-icon:hover { filter: invert(57%) sepia(49%) saturate(3510%) hue-rotate(175deg) brightness(96%) contrast(98%); }

@@ -9,7 +9,7 @@ Source code: [Github](https://github.com/tgrants/tgrants.github.io)
 * Hosted using [GitHub Pages](https://pages.github.com/)
 * Data is loaded from markdown and JSON files
 * Page hits are counted with [Abacus](https://github.com/JasonLovesDoggo/abacus)
-* Images are hosted with [ImgBB](https://imgbb.com/)
+* Images are hosted with [lejupla.de](https://lejupla.de/)
 * Social media icons from [simpleicons.org](https://simpleicons.org/)
 * Fonts from [Google Fonts](https://fonts.google.com/)
 

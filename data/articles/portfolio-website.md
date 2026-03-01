@@ -2,11 +2,11 @@
 
 My portfolio website is this site you're on right now - its purpose is to showcase my personal projects.
 
-![Portfolio website screenshot](https://i.ibb.co/kgsrsnn/portfolio-website.webp)
+![Portfolio website screenshot](https://cdn.lejupla.de/tg/portfolio-website.webp)
 
 * Hosted using [GitHub Pages](https://pages.github.com/)
 * Data is loaded from markdown and JSON files
 * Page hits are counted with [Abacus](https://github.com/JasonLovesDoggo/abacus)
-* Images are hosted with [ImgBB](https://imgbb.com/)
+* Images are hosted with [lejupla.de](https://lejupla.de/)
 * Social media icons from [simpleicons.org](https://simpleicons.org/)
 * Fonts from [Google Fonts](https://fonts.google.com/)
