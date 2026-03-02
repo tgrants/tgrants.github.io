@@ -5,7 +5,7 @@
 		"published" : "2024-09-14",
 		"edited" : "2025-06-21",
 		"text" : "A website for practicing for Latvian centralized exam tests.",
-		"thumbnail" : "https://i.ibb.co/cb45bsT/cet.webp",
+		"thumbnail" : "https://cdn.lejupla.de/tg/cet.webp",
 		"thumbnail_alt" : "Screenshot of the CPKET website"
 	},
 	{
@@ -14,7 +14,7 @@
 		"published" : "2024-05-26",
 		"edited" : "2024-11-29",
 		"text" : "A backrooms game. This is the first 3D game I've made. Features procedural room generation, custom 3D models and sound design.",
-		"thumbnail" : "https://i.ibb.co/5L5Ytxg/backrooms-game.webp",
+		"thumbnail" : "https://cdn.lejupla.de/tg/backrooms-game.webp",
 		"thumbnail_alt" : "Screenshot of backrooms game"
 	},
 	{
@@ -23,7 +23,7 @@
 		"published" : "2022-01-12",
 		"edited" : "2026-03-01",
 		"text" : "My portfolio website is this site you're on right now - its purpose is to showcase my personal projects.",
-		"thumbnail" : "https://i.ibb.co/kgsrsnn/portfolio-website.webp",
+		"thumbnail" : "https://cdn.lejupla.de/tg/portfolio-website.webp",
 		"thumbnail_alt" : "Screenshot of the source code for this website"
 	},
 	{
@@ -32,7 +32,7 @@
 		"published" : "2022-01-07",
 		"edited" : "2022-01-14",
 		"text" : "I've worked on some interesting things before making this website, some of them will be listed here.",
-		"thumbnail" : "https://i.ibb.co/7NKvkBj/simplex-spin.webp",
+		"thumbnail" : "https://cdn.lejupla.de/tg/simplex-spin.webp",
 		"thumbnail_alt" : "Spinning simplex"
 	},
 	{
@@ -41,7 +41,7 @@
 		"published" : "2022-01-12",
 		"edited" : "2024-09-14",
 		"text" : "This 2D endless runner is my first game, made as an entry in a game jam. I made it in about 6 hours using Unity game engine and it features randomly generated surroundings and obstacles.",
-		"thumbnail" : "https://i.ibb.co/j8mKLgn/driving-simulator-2021-screenshot.png",
+		"thumbnail" : "https://cdn.lejupla.de/tg/driving-simulator-2021-screenshot.webp",
 		"thumbnail_alt" : "Screenshot of the game"
 	}
 ]

@@ -9,21 +9,19 @@ body {
 	display: flex;
 	flex-direction: column;
 	background: #181824;
+	font-family: 'Roboto';
+	font-weight: 300;
 }
 
 /* Headings and parahrapghs */
-h1 {
-	font-family: 'Roboto';
-	font-size: 28px;
-	color: #f5f5f5;
-}
+h1,
 h2 {
-	font-family: 'Roboto';
-	font-size: 28px;
 	color: #f5f5f5;
+	font-size: 28px;
+	font-weight: 300;
 }
+
 p {
-	font-family: 'Roboto';
 	font-size: 16px;
 	color: #f5f5f5;
 }
@@ -36,12 +34,10 @@ hr {
 	margin-bottom: 1em;
 	margin-left: auto;
 	margin-right: auto;
+	width: 100%;
 }
 
 /* Links */
-a {
-	font-family: 'Roboto';
-}
 a:link {
 	color: #f5f5f5;
 }
@@ -138,7 +134,6 @@ a:active {
 .icon > img:hover { filter: invert(66%) sepia(93%) saturate(356%) hue-rotate(336deg) brightness(103%) contrast(101%); }
 
 /* FOOTER */
-
 footer {
 	flex-shrink: 0;
 	display: flex;
@@ -147,12 +142,10 @@ footer {
 	background: #10101a;
 	padding: 25px 20px;
 }
-
 #footer-navigation {
 	display: flex;
 	flex-direction: row;
 }
-
 .footer-icon {
 	fill: #f5f5f5;
 	width: 25px;
@@ -183,7 +176,6 @@ h6.markdown,
 p.markdown,
 a.markdown,
 ul.markdown{
-	font-family: 'Roboto';
 	color: #f5f5f5;
 }
 /* Heading */
@@ -194,7 +186,7 @@ h4.markdown,
 h5.markdown,
 .markdown h6 {
 	padding-top: 0.4em;
-	font-weight: bold;
+	font-weight: 400;
 }
 .markdown h1 {
 	font-size: 2em;
@@ -248,6 +240,9 @@ p.markdown > img {
 
 /* CONTENT */
 #content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	flex: 1 0 auto;
 	padding: 30px 15px;
 	width: auto;
@@ -261,12 +256,13 @@ p.markdown > img {
 /* index.html */
 /* Introduction */
 .introduction {
-	text-align: left;
+	text-align: center;
 	padding: 20px 0 35px;
 }
 .introduction h1 {
-	font-family: "Arial";
+	font-weight: 700;
 	font-size: 2.7rem;
+	padding-bottom: 20px;
 }
 .introduction p {
 	font-size: 1.5rem;
@@ -314,11 +310,11 @@ p.markdown > img {
 /* Hit count */
 .visits {
 	text-align: left;
-	font-family: "Roboto";
 	font-size: 1.6rem;
 }
 .visits th {
 	color: #afafaf;
+	font-weight: 300;
 }
 .hits {
 	color: #ffb555;
@@ -331,7 +327,6 @@ p.markdown > img {
 	background-color: #323449;
 	border: 1px solid #f5f5f5;
 	border-collapse: collapse;
-	font-family: "Roboto";
 }
 .downloads-table th {
 	background-color: #1d1e2b;

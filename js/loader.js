@@ -37,7 +37,7 @@ function loadRecent(path, id) {
 }
 
 function loadAll(path) {
-	var content = document.getElementById("content");
+	var content = document.getElementById("articles");
 
 	fetch(path)
 	.then((response) => {
